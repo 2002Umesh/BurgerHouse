@@ -8,7 +8,7 @@ const authRoute = require("./router/auth-router");
 
 //handling cors policy and hosting
 const corsOptions = {
-  origin: [process.env.MYPORT],
+  origin: [process.env.MYPORT, "http://localhost:5173"],
   methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
   credentials: true,
 };
