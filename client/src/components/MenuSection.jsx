@@ -85,22 +85,11 @@ const MenuSection = () => {
           add: !item.add,
         };
       }
-      
+
       return mItem;
     });
     setMenuItems(updateMenu);
     const updatedItem = { ...item, add: !item.add };
-
-    // if (filterOption === "all") {
-    //   const updatedMenuItems = [...menuItems];
-    //   updatedMenuItems[index] = updatedItem;
-    //   setMenuItems(updatedMenuItems);
-    // } else {
-    //   const updatedMenuItems = [...filteredItems];
-    //   updatedMenuItems[index] = updatedItem;
-    //   filteredItems = updatedMenuItems;
-    //   // setMenuItems(updatedMenuItems);
-    // }
 
     if (updatedItem.add) {
       const newOrder = [
@@ -243,7 +232,6 @@ const MenuSection = () => {
               <h3 className="filter-card__h3">{item.title}</h3>
               <p className="filter-card__p">{item.description}</p>
               <div className="flex justify-between">
-                <h4 className="filter-card__h4">{item.price}</h4>
                 {item.add && (
                   <div className="">
                     <div onClick={() => toggleToppingModal(item)} className="">
@@ -294,6 +282,7 @@ const MenuSection = () => {
                     )}
                   </div>
                 )}
+                <h4 className="filter-card__h4">{item.price}</h4>
               </div>
             </div>
           </div>

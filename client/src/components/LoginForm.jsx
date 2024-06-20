@@ -99,10 +99,6 @@ function LoginForm() {
           password: "",
         });
 
-        // window.location.href = "/";
-        // window.onload = function () {
-        //   alert("Logged in successfully");
-        // };
         navigate("/");
         alert("Login successful");
       } else {
