@@ -16,11 +16,13 @@ const Navbar = () => {
     <nav className="nav">
       <div className="nav__container">
         <h2 className="nav__h2">
-          <img
-            src="./images/b-house.png"
-            alt="logo"
-            className="h-[150px] w-[150px]"
-          />
+          <Link to="/">
+            <img
+              src="./images/b-house.png"
+              alt="logo"
+              className="h-[150px] w-[150px]"
+            />
+          </Link>
         </h2>
         <div
           className="nav__icon nav__icon--menu"
@@ -31,16 +33,16 @@ const Navbar = () => {
         </div>
 
         <ul className={`nav__ul nav__ul--desktop`}>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#promotions">Promotions</a>
           </li>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#menu">Menu</a>
           </li>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#about">About</a>
           </li>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#book">Book Table</a>
           </li>
         </ul>
@@ -49,12 +51,13 @@ const Navbar = () => {
             className="nav__icon nav__icon--user"
             onClick={() => {
               LogoutUser();
+              handleMenu();
             }}
           >
             <FaUser />
           </div>
         ) : (
-          <div className="nav__icon nav__icon--user">
+          <div className="nav__icon nav__icon--user" onClick={handleMenu}>
             <Link to="/login">
               <FaUser />
             </Link>
@@ -68,27 +71,28 @@ const Navbar = () => {
               className="nav__li "
               onClick={() => {
                 LogoutUser();
+                handleMenu();
               }}
             >
               <FaUser size={27} color="white" />
             </li>
           ) : (
-            <li className="nav__li">
+            <li className="nav__li" onClick={handleMenu}>
               <Link to="/login">
                 <FaUser size={27} />
               </Link>
             </li>
           )}
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#promotions">Promotions</a>
           </li>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#menu">Menu</a>
           </li>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#about">About</a>
           </li>
-          <li className="nav__li">
+          <li className="nav__li" onClick={handleMenu}>
             <a href="#book">Book Table</a>
           </li>
         </ul>
