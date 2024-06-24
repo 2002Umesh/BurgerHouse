@@ -36,7 +36,7 @@ const FooterSection = () => {
         </div>
 
         <div className="footer__card">
-          <h5 className="footer__h5">Burger Shop</h5>
+          <h5 className="footer__h5">Burger House</h5>
           <p className="footer__p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
             deleniti obcaecati alias suscipit, laboriosam est excepturi

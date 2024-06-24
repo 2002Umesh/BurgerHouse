@@ -12,7 +12,7 @@ const AboutSection = () => {
           />
         </div>
         <div className="section-about__text-container">
-          <h2 className="section-about__h2">We are Burger Shop</h2>
+          <h2 className="section-about__h2">We are Burger House</h2>
           <p className="section-about__p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             recusandae id perspiciatis labore molestias pariatur cum suscipit
