@@ -225,7 +225,9 @@ const MenuSection = () => {
               <img
                 src={item.add ? "./images/check.png" : item.image}
                 alt={item.type}
-                className="filter-card__img"
+                className={`filter-card__img rounded-full ${
+                  item.add ? "shadow-custom-white" : ""
+                }`}
               />
             </div>
             <div className="filter-card__text-container relative">
